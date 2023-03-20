@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 2</title>
-    <link rel="stylesheet" href="./main.css">
+    <title>Agenda de Contatos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./main.css">
+
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="./imagens/icone-telefone-png-download-3.png" alt="Telefone">
-            <h1>Lista de Contatos</h1>
-        </header>
-        <form id="form-contatos">
-            <input type="text" id="nome-contato" required placeholder="Nome do Contato">
-            <input type="number" id="numero-contato" required placeholder="Número do Contato">
-            <button type="submit">Adicionar +</button>
-        </form>
+    <header>
+        <img src="./imagens/icone-telefone-png-download-3.png" alt="telefone">
+        <h1>Agenda de Contatos</h1>
+    </header>
+    <form id="form-contato">
+        <input type="text" id="nome-contato" required placeholder="Nome do Contato" />
+        <input type="number" id="numero-contato" required placeholder="Numero do Contato"/>
+        <button type="submit">Adicionar +</button>
+    </form>
 
-        <table cellspacing="0">
-            <head>
-                <tr>
-                   <th>Nome do Contato</th>
-                   <th>Número do Contato</th>
-                </tr>
-            </head>
-        </table>
+    <table cellspacing="0">
+        <thead> <!-- CABEÇALHO DA TABELA -->
+            <tr><!-- LINHA DA TABELA -->
+                <th>Nome do Contato</th><!-- COLUNA DA TABELA -->
+                <th>Numero de Contato</th>
+            </tr>
+        </thead>
+        <tbody> <!-- ADICIONA O CONTEUDO DA TABELA -->
+        </tbody>
+    </table>
     </div>
     <script src="./main.js"></script>
 </body>

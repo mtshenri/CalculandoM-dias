@@ -1,36 +1,21 @@
-const form = document.getElementById('form-contatos')
-
+const form = document.getElementById('form-contato')
 let linhas = '';
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    adicionaLinha();
-    atualizaTabela();
-});
+    const nomeContato = document.getElementById('nome-contato');
+    const numeroContato = document.getElementById('numero-contato');
 
-function adicionaLinha () {
-    const inputNomeContato = document.getElementById('nome-contato');
-    const inputNumeroContato = document.getElementById('numero-contato');
+    let linha = '<tr>'
+    linha += `<td>${nomeContato.value}</td>`;
+    linha += `<td>${numeroContato.value}</td>`;
+    linha += '</tr>'
 
-    if (nome.includes(inputNomeContato.value)) {
-        alert(`O contato: ${inputNomeContato.value} já foi inserida`);
-    } else {        
-        nome.push(inputNomeContato.value);
-        numero.push(parseFloat(inputNumeroContato.value));
+    linhas += linha;
 
-        let linha = '<tr>';
-        linha += `<td>${inputNomeContato.value}</td>`;
-        linha += `<td>${inputNumeroContato.value}</td>`;
-        linha += `</tr>`;
-
-         linhas += linha;
-}
-    inputNomeContato.value = '';
-    inputNomeContato.value = '';
-}
-
-function atualizaTabela() {
     const corpoTabela = document.querySelector('tbody');
     corpoTabela.innerHTML = linhas;
-}
+
+});
+
